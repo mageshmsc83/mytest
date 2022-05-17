@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mageshmscmytest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mageshmscmytest
+  template:
+    metadata:
+      labels:
+        app: mageshmscmytest 
+    spec:
+      containers:
+        - name: mageshmscmytest 
+          image: regrg2.azurecr.io/mageshmscmytest
+          ports:
+          - containerPort: 80
