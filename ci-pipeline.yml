@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '93e3f2bd-4175-44ec-a8c3-5d750b0f076a'
-  imageRepository: 'mageshmscmytest'
+  imageRepository: 'app1/mageshmscmytest'
   containerRegistry: 'regrg2.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
