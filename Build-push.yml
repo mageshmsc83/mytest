@@ -47,8 +47,8 @@ stages:
 
     - bash: echo Contents in System Default Working Directory; ls -R $(System.DefaultWorkingDirectory)        
     - bash: echo Before copying Contents in Build Artifact Directory; ls -R $(Build.ArtifactStagingDirectory)
-   - task: PublishBuildArtifacts@1
-     inputs:
-       PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-       ArtifactName: 'kube-manifests'
-       publishLocation: 'Container'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'kube-manifests'
+        publishLocation: 'Container'
